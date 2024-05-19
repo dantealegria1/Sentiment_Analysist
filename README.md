@@ -57,3 +57,8 @@ Replace 'YOUR_PRIVATE_KEY' with your actual API key to use the Thesaurus API.
 
 With these steps, you should be able to set up and run the Sentiment Analyst tool successfully. Enjoy analyzing sentiments!
 
+## Preview
+
+![image](https://github.com/dantealegria1/Sentiment_Analysist/assets/101352597/949b777d-d985-48ad-bc74-6dcc412aab1a)
+
+
