@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div id="Input">
+    <h1>Enter Your Text for the Analysis</h1>
+    <form action="/analyze" method="post" id="sentimentForm">
+        <textarea name="text" rows="4" cols="50" placeholder="Hey Mom, just wanted to say I love you and appreciate everything you do. You're the best!"></textarea><br>
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+</div>
+<div id="'info">
+    <div id="Descripition">
+        <h2>What is Sentiment Analyst?</h2>
+        <P>
+        The Sentiment Analyst is a web application built with Flask, a Python web framework, designed to analyze the sentiment of text input provided by the user. The tool utilizes natural language processing techniques to extract meaningful insights from the text and determine the sentiment expressed within it.
+        </P>
+    </div>
+    <div id="Usage">
+        <h2>How to Use it</h2>
+        <p>
+        To use the Sentiment Analyst, simply enter the text you would like to analyze in the text box provided and click the "Analyze Sentiment" button. The tool will process the text and provide you with a sentiment analysis, including the sentiment probabilities for each emotion category.
+        </p>
+    </div>
+</div>
+{% endblock %}

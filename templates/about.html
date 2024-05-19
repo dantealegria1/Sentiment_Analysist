@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <h1>How the Analyst works?</h1>
+  </head>
+  {% block body %}
+  <body>
+    <div id="Libs">
+        <h2>Libraries</h2>
+        <p>Different libraries are in the work in this project
+        <ul>
+            <li>Flask</li>
+            <li>Transformers</li>
+            <li>Nltk</li>
+            <li>Requests</li>
+        </ul>
+        and some others. Each one of them has a specific function in the project.
+        </p>
+    </div>
+    <div id="Process">
+        <h2>Process</h2>
+        <p>
+            The sentiment analysis process comprises two main steps. First, we tokenize the text, breaking it down into meaningful elements. This involves cleaning the input text to ensure accurate analysis. Second, we classify the text to determine the sentiment it expresses. This classification utilizes a pre-trained model fine-tuned on a dataset of labeled text samples. We match words from the input text with entries in our database to identify associated emotions.
+        </p>
+        <h4>What happens if a word is not found in the database?</h3>
+        <p>
+            When a word is not found in our database, we leverage the Thesaurus API (https://api-ninjas.com/api/thesaurus) to search for synonyms of that word. These synonyms are then matched against entries in our database. Additionally, in cases of misspelled words, we search for similar words with a predefined similarity threshold. 
+        </p>
+        <p>
+            This process may seem time-consuming. To mitigate this, we cache words and their associated emotions. This cache allows for quicker retrieval of emotions in future occurrences of the same words.
+        </p>
+
+    </div>
+  </body>
+  {% endblock %}
+</html>

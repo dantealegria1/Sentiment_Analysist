@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Sentiment Clasifier{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.min.js"></script>
+  </head>
+  <body>
+    {% block body %}
+      <h1>Result</h1>
+      <p>Text: {{ text }}</p>
+      {% if probabilities %}
+        <h2>Sentiment Probabilities:</h2>
+        <ul>
+        {% for emotion, probability in probabilities.items() %}
+          <li>{{ emotion }}: {{ probability }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      <p id="classificacion">Clasification: {{Clasification}}</p>
+    {% endblock %}
+</html>
